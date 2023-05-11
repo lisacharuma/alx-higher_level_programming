@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     """print sum, difference, quotient and multiple of 10 n 5"""
-    from calculator_1 import add, sub, mul, div
+    from calculator_1 import add
+    from calculator_1 import sub
+    from calculator_1 import mul
+    from calculator_1 import div
 
     a = 10
     b = 5
