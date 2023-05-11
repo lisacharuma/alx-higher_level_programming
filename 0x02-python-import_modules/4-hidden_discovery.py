@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if __name__ "__main__":
+if __name__ == "__main__":
     """Print names defined by compiled module hidden_4.pyc"""
     import hidden_4
 
