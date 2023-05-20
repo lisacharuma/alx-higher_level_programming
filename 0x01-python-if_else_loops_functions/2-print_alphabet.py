@@ -5,5 +5,5 @@
 char = ord('a')
 
 while char <= ord('z'):
-    print(chr(char), end="")
+    print("{}".format(chr(char)), end="")
     char += 1
