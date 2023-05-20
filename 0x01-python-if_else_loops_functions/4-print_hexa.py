@@ -5,5 +5,5 @@
 num = 0
 while num <= 98:
     hexnum = hex(num)
-    print(f"{num} = {hexnum}")
+    print("{} = {}".format(num, hexnum))
     num += 1
