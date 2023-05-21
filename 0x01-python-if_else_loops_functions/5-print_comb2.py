@@ -5,9 +5,8 @@
 num = 0
 
 while num <= 99:
-    print("{:02d}".format(num), end="")
-    if num != 99:
-        print(", ", end="")
+    if num == 99:
+        print("{}".format(num))
     else:
-        print()
+        print("{:02}".format(num), end=", ")
     num += 1
