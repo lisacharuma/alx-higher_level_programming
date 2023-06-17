@@ -10,6 +10,6 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def class_to_json(self):
+    def to_json(self):
         """Returns a json rep of a student object"""
         return (self.__dict__)
