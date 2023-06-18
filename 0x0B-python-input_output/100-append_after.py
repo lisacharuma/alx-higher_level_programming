@@ -14,6 +14,5 @@ def append_after(filename="", search_string="", new_string=""):
             new_content += txt
             if search_string in txt:
                 new_content += new_string
-                break
     with open(filename, "w") as fp2:
         fp2.write(new_content)
