@@ -14,5 +14,5 @@ def append_after(filename="", search_string="", new_string=""):
             str += txt
             for search_string in txt:
                 str += new_string
-    with open(filename) as fp2:
+    with open(filename, "w") as fp2:
         fp2.write(str)
