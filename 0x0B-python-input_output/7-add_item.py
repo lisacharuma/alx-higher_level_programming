@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Defined a function which adds args to list"""
+""""Module which adds args to list"""
 import sys
 
 
-if _name_ == "__main__":
-    save_to_json_file = _import_('5-save_to_json_file').save_to_json_file
-    load_from_json_file = _import_('6-load_from_json_file').load_from_json_file
+if __name__ == "__main__":
+    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+    load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
     try:
         items = load_from_json_file("add_item.json")
