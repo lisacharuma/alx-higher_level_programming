@@ -86,3 +86,10 @@ class Rectangle(Base):
             print("")
         if self.__width == 0 or self.height == 0:
             print("")
+
+    def __str__(self):
+        """"defines how a rectangle is represented"""
+        return "[Rectangle] ({}) {}/{} - {}/{}" .format(self.id,
+                                                        self.x, self.y,
+                                                        self.width,
+                                                        self.height)
