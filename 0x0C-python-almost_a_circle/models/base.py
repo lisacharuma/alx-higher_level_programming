@@ -63,6 +63,14 @@ class Base:
         try:
             with open(filename, "r") as fp:
                 json_data = fp.read()
-                return cls.from_json_string(json_data)
+                if json_data:
+                    dictionaries = cls.from_json_string(json_data)
+                    instances = []
+                    for dictionary in dictionaries:
+                        instance = cls.create(**dictionary)
+                        instances.append(instance)
+                    return instances
+                else:
+                    return []
         except FileNotFoundError:
             return []
