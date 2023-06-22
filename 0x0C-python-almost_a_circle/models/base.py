@@ -37,3 +37,11 @@ class Base:
         j_str = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
         with open(filename, 'w') as fp:
             fp.write(j_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """"returns a list of the JSON string rep of json_string"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
