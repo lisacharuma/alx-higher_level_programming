@@ -69,4 +69,4 @@ Case 7: Non-integer Types
 	  >>> mod_test.integer_validator("bool", False)
           Traceback (most recent call last):
           ...
-          TypeError: bool must be an integer
+          ValueError: bool must be greater than 0
