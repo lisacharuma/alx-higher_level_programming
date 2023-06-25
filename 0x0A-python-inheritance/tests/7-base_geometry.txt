@@ -1,0 +1,72 @@
+Importing the module
+        >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+========================================================================
+*******Checking the area() method*******
+
+Case 1: Expected behavior
+	  >>> mod_test = BaseGeometry()
+	  >>> mod_test.area()
+	  Traceback (most recent call last):
+	  ...
+	  Exception: area() is not implemented
+
+Case 2: An argument is passed
+	  >>> mod_test.area(4)
+	  Traceback (most recent call last):
+          ...
+	  TypeError: area() takes 1 positional argument but 2 were given
+
+========================================================================
+*******Checking the integer_validator() method*******
+
+Case 1: integer > 1 passed as argument
+	  >>> mod_test.integer_validator("integer", 3)
+
+Case 2: integer == 0 passed as argument
+	  >>> mod_test.integer_validator("integer", 0)
+	  Traceback (most recent call last):
+          ...
+          ValueError: integer must be greater than 0
+
+Case 3: integer < 0 as argument
+	  >>> mod_test.integer_validator("integer", -1)
+	  Traceback (most recent call last):
+          ...
+          ValueError: integer must be greater than 0
+
+Case 4: no args passed
+          >>> mod_test.integer_validator()
+          Traceback (most recent call last):
+          ...
+          TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Case 5: only one arg passed
+          >>> mod_test.integer_validator("integer")
+          Traceback (most recent call last):
+          ...
+          TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Case 6: > 2 args passed
+          >>> mod_test.integer_validator("integer", 1, 3)
+          Traceback (most recent call last):
+          ...
+          TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Case 7: Non-integer Types
+	  >>> mod_test.integer_validator("float", 1.2)
+	  Traceback (most recent call last):
+          ...
+          TypeError: float must be an integer
+
+
+	  >>> mod_test.integer_validator("string", "yes")
+          Traceback (most recent call last):
+          ...
+          TypeError: string must be an integer
+
+
+	  >>> mod_test.integer_validator("bool", False)
+          Traceback (most recent call last):
+          ...
+          TypeError: bool must be an integer
