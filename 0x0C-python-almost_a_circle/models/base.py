@@ -109,3 +109,42 @@ class Base:
         except FileNotFoundError:
             return []
         return objects
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Opens a new window and draws rectangle and squares"""
+        screen = turtle.Screen()
+        screen.title("Drawing Rectangles and Squares")
+        screen.setup(800, 600)
+
+        """creating a turtle object for drawing"""
+        pen = turtle.Turtle()
+        pen.speed(0)
+        """draw rectangles"""
+        pen.color("red")
+        for rectangle in list_rectangles:
+            width = rectangle.width
+            height = rectangle.height
+            pen.penup()
+            pen.goto(0, 0)
+            pen.pendown()
+            pen.forward(width)
+            pen.right(90)
+            pen.forward(height)
+            pen.right(90)
+            pen.forward(width)
+            pen.right(90)
+            pen.forward(height)
+            pen.right(90)
+
+        """Squares"""
+        pen.color("blue")
+        for square in list_squares:
+            size = square.size
+            pen.penup()
+            pen.goto(0, 0)
+            pen.pendown()
+            for _ in range(4):
+                pen.forward(size)
+                pen.right(90)
+        turtle.done()
