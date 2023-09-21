@@ -1,0 +1,1 @@
+This is the readme file for the project 0x0C-python-almost_a_circle which centers on all the topics covered this far in Python. This project will use incremental development until meaningful classes are created.
