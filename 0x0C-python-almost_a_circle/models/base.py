@@ -147,4 +147,4 @@ class Base:
             for _ in range(4):
                 pen.forward(size)
                 pen.right(90)
-        turtle.done() 
+        turtle.done()
