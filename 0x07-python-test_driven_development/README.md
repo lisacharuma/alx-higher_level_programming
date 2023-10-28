@@ -1,0 +1,1 @@
+This is the readme file for the project 0x07-python-test_driven_development. This project puts emphasis on writing tests before code for a given feature or functionality and in turn, creates a more reliable and maintainable code
