@@ -1,0 +1,93 @@
+0-add_integer module test file
+______________________________
+
+The 0-add_integer module works with integers or floats only
+It takes two arguments and return their sum as an integer, thus floats are casted before use
+
+Using 0-add_integer
+-------------------
+
+First import add_integer from the module
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Case 1: two positive integers
+    >>> add_integer(2, 3)
+    5
+
+Case 2: Adding a positive and a negative int
+    >>> add_integer(6, -3)
+    3
+
+Case 3: Both arguments are negative integers
+    >>> add_integer(-3, -2)
+    -5
+
+Case 4: two positive floats
+            >>> add_integer(3.5, 2.5)
+            5
+
+Case 5: two negative floats
+            >>> add_integer(-6.5, -6.2)
+            -12
+
+Case 6: a positive and a negative float
+            >>> add_integer(8.8, -2.3)
+            6
+
+Case 7: a positive float and a positive integer
+    >>> add_integer(3.5, 9)
+    12
+
+Case 8: a positive float and a negative integer
+            >>> add_integer(13.5, -5)
+            8
+
+Case 9: Using default values (b = 98)
+-------------------------------------
+
+Adding an integer and a default value
+    >>> add_integer(7)
+    105
+
+Adding a float and a default value
+    >>> add_integer(7.5)
+    105
+
+Case 10: Errors - Adding with non-numbers
+-----------------------------------------
+
+a. Adding int with a string
+    >>> add_integer(1, "Lisa")
+    Traceback (most recent call last):
+	      ...
+    TypeError: b must be an integer
+
+b. Adding an int with a character
+    >>> add_integer(1, 'l')
+    Traceback (most recent call last):
+              ...
+    TypeError: b must be an integer
+
+c. Adding two characters
+    >>> add_integer('l', 'c')
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+
+d. Adding a number and a list
+    >>> add_integer(56, [])
+    Traceback (most recent call last):
+              ...
+    TypeError: b must be an integer
+
+e. Passing a tuple
+    >>> add_integer((3, 2, 1))
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+
+f. Passing no parameter
+    >>> add_integer(None)
+    Traceback (most recent call last):
+	      ...
+    TypeError: a must be an integer
