@@ -1,0 +1,1 @@
+This is the readme file for the project 0x08-python-more_classes which focuses on venturing deeper into the world of object oriented programming in Python. It will start with defining an empty class then goes on to adding more features to the class to get a full reusable class
