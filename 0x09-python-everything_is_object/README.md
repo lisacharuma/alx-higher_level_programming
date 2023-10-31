@@ -1,0 +1,1 @@
+This is the README file for the project 0x09-python-everything_is_object. This project focuses on having an understanding of the reasons behind the answers that we get we running code. That also helps us understand how Python works with different objects.
