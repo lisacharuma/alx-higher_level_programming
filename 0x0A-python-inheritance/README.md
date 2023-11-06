@@ -1,0 +1,1 @@
+This is the readme file for the project 0x0A-python-inheritance, which is all about making code reusable. In the inheritance approach, methods or attributes definesd in one class can be reused on insatnces of the other class which inherits from it called the child class without having to redefine them.
