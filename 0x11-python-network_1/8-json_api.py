@@ -5,7 +5,6 @@ with the letter as a parameter.
 """
 import requests
 from sys import argv
-from json import JSONDecodeError
 
 
 def main(argv):
@@ -26,7 +25,7 @@ def main(argv):
             print("No result")
         else:
             print("[{}] {}".format(result['id'], result['name']))
-    except JSONDecodeError:
+    except ValueError as e:
         print("Not a valid JSON")
 
 
